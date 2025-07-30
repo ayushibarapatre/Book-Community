@@ -1,0 +1,29 @@
+/* App.css */
+
+:root {
+  --bg: #000000e6;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
