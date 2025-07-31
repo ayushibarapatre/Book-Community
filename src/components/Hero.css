@@ -39,38 +39,3 @@
   transform: scale(1.05);
 }
 
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,100px)); 
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 5rem;
-  padding: 0 2rem;
-  border-radius: 12px;
-}
-
-.video-wrapper {
-  box-shadow: 0 4px 12px rgba(84, 100, 227, 0.3);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.small-video {
-  width: 100%;
-  height: 190px;                /* fixed chhoti height */
-  object-fit: cover;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-.mood-selector {
-  margin-top: 1rem;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-}

@@ -1,5 +1,8 @@
 import Nav from './components/Navbar';
 import Hero from './components/Hero';
+import RealBooks from "./components/RealBooks";
+
+
 import './App.css';
 
 function App() {
@@ -7,6 +10,10 @@ function App() {
     <div className="App">
       <Nav />
       <Hero />
+      {/* <BookSection /> */}
+      <RealBooks />
+
+
     </div>
   );
 }
