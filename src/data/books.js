@@ -1,7 +1,4 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
-import "./RealBooks.css";
-
+// src/data/books.js
 const books = [
   {
     id: 1,
@@ -61,47 +58,4 @@ const books = [
   }
 ];
 
-function RealBooks() {
-  const scrollRef = useRef(null);
-
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-  };
-
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-  };
-
-  return (
-    <div className="realbooks-container">
-      <h2 className="realbooks-title">Explore Books</h2>
-
-      <div className="realbooks-search">
-        <input type="text" placeholder="Search books..." />
-        <button>Search</button>
-      </div>
-
-      <div className="realbooks-row-wrapper">
-        <button className="scroll-button left" onClick={scrollLeft}>&lt;</button>
-
-        <div className="realbooks-row" ref={scrollRef}>
-          {books.map((book) => (
-            <Link
-              to={`/book/${book.id}`}
-              className="book-card"
-              key={book.id}
-            >
-              <img className="book-cover" src={book.coverImage} alt={book.title} />
-              <div className="book-title">{book.title}</div>
-              <div className="book-author">{book.author}</div>
-            </Link>
-          ))}
-        </div>
-
-        <button className="scroll-button right" onClick={scrollRight}>&gt;</button>
-      </div>
-    </div>
-  );
-}
-
-export default RealBooks;
+export default books;

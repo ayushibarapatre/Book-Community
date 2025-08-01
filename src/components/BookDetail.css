@@ -1,0 +1,9 @@
+.book-detail-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.book-detail-container img {
+  height: 300px;
+  margin: 1rem 0;
+}

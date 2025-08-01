@@ -1,20 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Navbar';
 import Hero from './components/Hero';
 import RealBooks from "./components/RealBooks";
-
+import BookDetail from "./components/BookDetail";
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Hero />
-      {/* <BookSection /> */}
-      <RealBooks />
+    <Router>
+      <div className="App">
+        <Nav />
 
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <RealBooks />
+            </>
+          } />
 
-    </div>
+          <Route path="/book/:id" element={<BookDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
