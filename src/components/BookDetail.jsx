@@ -1,3 +1,4 @@
+// src/components/BookDetail.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
 import books from "../data/books";
@@ -8,7 +9,7 @@ const BookDetail = () => {
   const book = books.find((b) => b.id === parseInt(id));
 
   if (!book) {
-    return <div>Book not found.</div>;
+    return <div className="book-detail"><h2>Book not found.</h2></div>;
   }
 
   return (
@@ -16,7 +17,9 @@ const BookDetail = () => {
       <h1>{book.title}</h1>
       <img src={book.coverImage} alt={book.title} />
       <p><strong>Author:</strong> {book.author}</p>
-      <a href={book.link} target="_blank" rel="noreferrer">Read Book</a>
+      <a href={book.link} target="_blank" rel="noreferrer">
+        📖 Read Book
+      </a>
     </div>
   );
 };

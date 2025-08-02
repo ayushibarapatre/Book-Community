@@ -55,7 +55,7 @@ const books = [
     author: "Leo Tolstoy",
     coverImage: "https://covers.openlibrary.org/b/id/7222161-L.jpg",
     link: "https://openlibrary.org/works/OL27619W/War_and_Peace",
-  }
+  },
 ];
 
 export default books;
